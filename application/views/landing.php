@@ -57,13 +57,14 @@
                     <h1>Pass(Your)Word</h1>
                     <h3>Prepare Yourself for a Secret Adventure</h3>
                     <hr class="intro-divider">
-                    <div class="form-group">
-                        <label class="sr-only" for="examplePassword">Enter Password</label>
-                        <input type="text" class="form-control" id="examplePassword" name="name" placeholder="Enter Password">
-                    </div>
-                    <div class="col-lg-6 col-lg-offset-3">
-                        <button type="submit" class="btn btn-primary btn-lg btn-block" style="width:550px; height:50px">Submit!</button>
-                    </div>
+                    <form class="form-inline" role="form" action="<?php echo site_url('form_handler')?>" method="POST">
+                        <div class="form-group">
+                            <label class="sr-only" for="examplePassword">Enter Password</label>
+                            <input type="text" class="form-control" id="examplePassword" name="name" placeholder="Please enter your password to be secured with biometric verification">
+                        </div>
+                        <div class="col-lg-6 col-lg-offset-3">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" style="width:550px; height:50px">Submit!</button>
+                        </div>
                 </div>
             </div>
         </div>
