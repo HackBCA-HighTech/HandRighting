@@ -19,6 +19,8 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->library('session');
+		$this->session->set_userdata(['counter' => 1]);
 		$this->load->view('landing');
 	}
 

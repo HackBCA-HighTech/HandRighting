@@ -3,14 +3,16 @@
 <html lang="en">
 <head>
     <title>Canvas</title>
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
-    <style type="text/css"><!--
-        #container { position: relative;}
-        #imageView { border: 0px solid #000; border-radius: 10px; background-color: #eee;}
-        --></style>
-</head>
-<body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <style type="text/css">
+
+      #container { position: relative;}
+      #imageView { border: 0px solid #000; border-radius: 10px; background-color: #eee; margin-left:60px}
+    --></style>
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -38,17 +40,47 @@
 <br>
 <br>
 <br>
-<h2 align="center">Please clearly print your password into the canvas below.</h2>
+    <h2 style= margin-left:60px> Please clearly print your password into the canvas below.</h2>
+    <br>
+    <div id="container">
+      <canvas id="imageView" width="800" height="200">
+      </canvas>
+    </div>
+    <br>
+    <div align = "center">
+        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage()" >Next (2/10)</button>
+    </div>
 <br>
-<div style="width: 800px; margin: 0 auto;">
-    <canvas id="imageView" width="800" height="200">
-    </canvas>
-</div>
-<br>
-<div style="width: 150px; margin: 0 auto;">
-    <button type="button" class="btn btn-lg btn-info" style="width:150px; height:50px">Next (2/10)</button>
-</div>
-<br>
-<script type="text/javascript" src="../../js/Canvas.js"></script>
-</body>
+    <script type="text/javascript" src="js/Canvas.js"></script>
+
+<script>
+
+function saveImage(){
+    var canvas = document.getElementById('imageView');
+    var dataURL = canvas.toDataURL();
+
+    // pass in $password later
+    var filename = "helloworld";
+
+    //document.getElementById('canvasImg').src = dataURL;
+    console.log(dataURL);
+    $.ajax({
+        type: "POST",
+        url: "<?php echo site_url('canvas_data')?>",
+        data: {
+            imgBase64: dataURL,
+            text: filename
+        }
+    }
+    )
+    .done(function(response) {
+            console.log('saved: ' + response);
+        });
+}
+</script>
+<script src="/js/jquery-1.10.2.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/Canvas.js"></script>
+  </body>
 </html>
+
