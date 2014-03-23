@@ -3,8 +3,9 @@
 <html lang="en">
 <head>
     <title>Canvas</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
     <style type="text/css">
+
       #container { position: relative;}
       #imageView { border: 0px solid #000; border-radius: 10px; background-color: #eee; margin-left:60px}
     --></style>
