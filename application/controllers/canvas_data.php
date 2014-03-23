@@ -28,7 +28,9 @@ class canvas_data extends CI_Controller {
         $filename = $_POST['text'];
         $img = str_replace(' ', '+', $img);
         $data = base64_decode($img);
-        $file = UPLOAD_DIR . $filename . '.png';
+        $this->load->library('session');
+        $counter = $this->session->userdata('counter');
+        $file = UPLOAD_DIR . $filename . "_" . $counter . '.png';
         $success = file_put_contents($file, $data);
 //send request to ocr
 

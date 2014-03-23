@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Canvas</title>
+    <title>Verification</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
     <style type="text/css">
 
@@ -40,7 +40,7 @@
 <br>
 <br>
 <br>
-    <h2 style= margin-left:60px> Please clearly print your password, <?php echo $password; ?>, into the canvas below.</h2>
+    <h2 style= margin-left:60px> Nice Work! Now, please attempt to log-in.</h2>
     <br>
     <div id="container">
       <canvas id="imageView" width="800" height="200">
@@ -48,7 +48,7 @@
     </div>
     <br>
     <div align = "center">
-        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage(); window.location.href='/index.php/password_write'" >Next (<?php echo $counter; ?>/10)</button>
+        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage()" >Submit</button>
     </div>
 <br>
     <script type="text/javascript" src="js/Canvas.js"></script>

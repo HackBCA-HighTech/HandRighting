@@ -3,7 +3,7 @@ if(window.addEventListener) {
     window.addEventListener('load', function () {
         var canvas, context, tool;
 
-        function init () {
+/*        function init () {
             canvas = document.getElementById('imageView');
             if (!canvas) {
                 alert('Error: I cannot find the canvas element!');
@@ -20,7 +20,7 @@ if(window.addEventListener) {
                 alert('Error: failed to getContext!');
                 return;
             }
-
+*/
             tool = new tool_pencil();
 
             canvas.addEventListener('mousedown', ev_canvas, false);

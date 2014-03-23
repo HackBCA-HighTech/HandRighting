@@ -20,10 +20,17 @@ class Password_write extends CI_Controller {
 
     public function index()
 	{
-        $password = $this->input->post('password');
+        $this->load->library('session');
         $counter = $this->session->userdata('counter');
+        if($counter == 1){
+            $password = $this->input->post('password');
+            $this->session->set_userdata(['password' => $password]);
+        }
+        $password = $this->session->userdata('password');
         if ($counter <= 10) {
-            $this->load->view('Canvas', $password, $counter);
+            $data['password'] = $password;
+            $data['counter'] = $counter;
+            $this->load->view('Canvas', $data);
         }
         else {
             $results = $this->biometricAnalysis();
