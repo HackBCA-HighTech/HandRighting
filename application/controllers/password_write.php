@@ -45,6 +45,9 @@ class Password_write extends CI_Controller {
         	$this->session->set_userdata(['times' => $times]);
             $results = $this->biometricAnalysis($times);
             $this->session->set_userdata(['ranges' => $results]);
+            $ranges = $this->session->userdata('ranges');
+			//var_dump($ranges);
+			//exit;
             $this->load->view('verification');
         }
         $counter = $counter + 1;
