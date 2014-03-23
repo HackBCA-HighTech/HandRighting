@@ -86,7 +86,7 @@
 <!-- /.banner -->
 
 <!-- JavaScript -->
-<script src="HandRighting2/js/jquery-1.10.2.js"></script>
+<script src="js/jquery-1.10.2.js"></script>
 <script src="js/bootstrap.js"></script>
 
 </body>

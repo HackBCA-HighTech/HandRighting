@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <title>Canvas</title>
-    <link rel="stylesheet" type="text/css" href="../../HandRighting2/css/bootstrap.css"> 
-    <style type="text/css"><!--
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style type="text/css">
       #container { position: relative;}
       #imageView { border: 0px solid #000; border-radius: 10px; background-color: #eee; margin-left:60px}
     --></style>
@@ -44,10 +44,35 @@
     </div>
     <br>
     <div align = "center">
- <button type="button" class="btn btn-lg btn-info">Next (2/10)</button>
+        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage()" >Next (2/10)</button>
     </div>
 <br>
-    <script type="text/javascript" src="../../HandRighting/js/Canvas.js"></script>
+    <script type="text/javascript" src="js/Canvas.js"></script>
+
+<script>
+
+function saveImage(){
+    var canvas = document.getElementById('imageView');
+    var dataURL = canvas.toDataURL();
+
+    //document.getElementById('canvasImg').src = dataURL;
+    console.log(dataURL);
+    $.ajax({
+        type: "POST",
+        url: "<?php echo site_url('canvas_data')?>",
+        data: {
+            imgBase64: dataURL
+        }
+    }
+    )
+    .done(function(response) {
+            console.log('saved: ' + response);
+        });
+}
+</script>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.js"></script>
+
   </body>
 </html>
 
