@@ -17,14 +17,28 @@ class Password_write extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+
+    public function index()
 	{
         $password = $this->input->post('password');
-        $_SESSION['password'] = $password;
-        $this->load->view('Canvas', $password);
+        $counter = $this->session->userdata('counter');
+        if ($counter <= 10) {
+            $this->load->view('Canvas', $password, $counter);
+        }
+        else {
+            $results = $this->biometricAnalysis();
+            $this->session->set_userdata(['results' => $results]);
+            $this->load->view('verification');
+        }
+        $counter = $counter + 1;
+        $this->session->set_userdata('counter', $counter);
 	}
 
+    public function biometricAnalysis()
+    {
+        //load images from database
 
+    }
 }
 
 /* End of file welcome.php */
