@@ -57,7 +57,7 @@
                     <h1>Pass(Your)Word</h1>
                     <h3>Prepare Yourself for a Secret Adventure</h3>
                     <hr class="intro-divider">
-                    <form class="form-inline" role="form" action="<?php echo site_url('form_handler')?>" method="POST">
+                    <form class="form-inline" role="form" action="<?php echo site_url('password_write')?>" method="POST">
                         <div class="form-group">
                             <label class="sr-only" for="examplePassword">Enter Password</label>
                             <input type="text" class="form-control" id="examplePassword" name="name" placeholder="Please enter your password to be secured with biometric verification">
