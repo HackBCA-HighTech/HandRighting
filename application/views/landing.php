@@ -1,18 +1,34 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Verification</title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <style type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-      #container { position: relative;}
-      #imageView { border: 0px solid #000; border-radius: 10px; background-color: #eee; margin-left:60px}
-    --></style>
-  </head>
-  <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <title>Landing Page Template for Bootstrap</title>
 
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom Google Web Font -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Add custom CSS here -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <style type="text/css"><!--
+        #container { position: relative; }
+        #imageView { border: 1px solid #000; }
+        --></style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -27,9 +43,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#contact">Contact Us</a>
+                <li>
+                    <a href="#contact">Contact Us</a>
                 </li>
-                <li><a href="#about">About</a>
+                <li>
+                    <a href="#about">About</a>
                 </li>
             </ul>
         </div>
@@ -37,50 +55,40 @@
     </div>
     <!-- /.container -->
 </nav>
-<br>
-<br>
-<br>
-    <h2 style= margin-left:60px> Nice Work! Now, please attempt to log-in.</h2>
-    <br>
-    <div id="container">
-      <canvas id="imageView" width="800" height="200">
-      </canvas>
+
+<div class="intro-header">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message">
+                    <h1>Hand Righting</h1>
+                    <h3>Prepare Yourself for a Secret Adventure</h3>
+                    <hr class="intro-divider">
+                    <div class="col-lg-6 col-lg-offset-3">
+                        <form class="form-inline" role="form" action="<?php echo site_url('password_write')?>" method="POST">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="examplePassword" style="width:400px; height:50px" name="password" placeholder="Enter password to be secured for biometric verification">
+                          <span class="input-group-btn">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block label-success" style="width:200px; height:50px; font-size:20px">Submit!</button>
+                          </span>
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                </div>
+            </div>
+        </div>
+
     </div>
-    <br>
-    <div align = "center">
-        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage()" >Submit</button>
-    </div>
-<br>
-    <script type="text/javascript" src="js/Canvas.js"></script>
+    <!-- /.container -->
 
-<script>
+</div>
+<!-- /.banner -->
 
-function saveImage(){
-    var canvas = document.getElementById('imageView');
-    var dataURL = canvas.toDataURL();
+<!-- JavaScript -->
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.js"></script>
 
-    // pass in $password later
-    var filename = "helloworld";
+</body>
 
-    //document.getElementById('canvasImg').src = dataURL;
-    console.log(dataURL);
-    $.ajax({
-        type: "POST",
-        url: "<?php echo site_url('canvas_data')?>",
-        data: {
-            imgBase64: dataURL,
-            text: filename
-        }
-    }
-    )
-    .done(function(response) {
-            console.log('saved: ' + response);
-        });
-}
-</script>
-<script src="/js/jquery-1.10.2.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/Canvas.js"></script>
-  </body>
 </html>
-
