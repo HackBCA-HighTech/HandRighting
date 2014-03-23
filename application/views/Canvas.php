@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="file:///Users/Macbook/Desktop/HandRighting2/css/bootstrap.css"> 
     <style type="text/css"><!--
       #container { position: relative;}
-      #imageView { border: 2px solid #000; border-radius: 10px; background-color: #F7FDF7}
+      #imageView { border: 0px solid #000; border-radius: 10px; background-color: #eee}
     --></style>
   </head>
   <body>
