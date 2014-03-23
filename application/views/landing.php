@@ -20,9 +20,9 @@
     <link href="css/landing-page.css" rel="stylesheet">
 
     <style type="text/css"><!--
-      #container { position: relative; }
-      #imageView { border: 1px solid #000; }
-    --></style>
+        #container { position: relative; }
+        #imageView { border: 1px solid #000; }
+        --></style>
 
 </head>
 
@@ -62,13 +62,12 @@
                     <h1>Pass(Your)Word</h1>
                     <h3>Prepare Yourself for a Secret Adventure</h3>
                     <hr class="intro-divider">
-                    <div class="form-group col-lg-6 col-lg-offset-3">
-                        <form class="form-inline" role="form" action="<?php echo site_url('password_write')?>" method="POST">
-                        <div class="form-group">
+                    <div class="col-lg-6 col-lg-offset-3">
+                        <div class="input-group">
                             <input type="text" class="form-control" id="examplePassword" style="width:400px; height:50px" name="password" placeholder="Enter Password">
-                            <span class="input-group-btn">
-                                <button type="submit" class="btn btn-primary btn-lg btn-block label-success" style="width:200px; height:50px; font-size:20px">Submit!</button>
-                              </span>
+                          <span class="input-group-btn">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block label-success" style="width:200px; height:50px; font-size:20px">Submit!</button>
+                          </span>
                         </div><!-- /input-group -->
                     </div><!-- /.col-lg-6 -->
                 </div>
@@ -84,11 +83,6 @@
 <!-- JavaScript -->
 <script src="HandRighting2/js/jquery-1.10.2.js"></script>
 <script src="js/bootstrap.js"></script>
-
-
-<div id="container">
-      <canvas id="imageView" width="800" height="300">
-      </canvas>
 
 </body>
 
