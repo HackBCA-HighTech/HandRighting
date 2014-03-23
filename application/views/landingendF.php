@@ -21,7 +21,7 @@
 
 </head>
 
-<body style="background-color:#003300;">
+<body style="background-color:#CC0A00;">
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
