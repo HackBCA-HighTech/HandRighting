@@ -13,18 +13,15 @@ window.addEventListener('load', function () {
   function init () {
     canvas = document.getElementById('imageView');
     if (!canvas) {
-      alert('Error: I cannot find the canvas element!');
       return;
     }
 
     if (!canvas.getContext) {
-      alert('Error: no canvas.getContext!');
       return;
     }
 
     context = canvas.getContext('2d');
     if (!context) {
-      alert('Error: failed to getContext!');
       return;
     }
 
