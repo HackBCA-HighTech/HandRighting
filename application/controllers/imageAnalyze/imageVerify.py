@@ -3,7 +3,7 @@ import os, json
 
 os.system("setPath.py")
 dirr = os.path.dirname(__file__)
-filename = os.path.join(dirr, '../../../imgs/generated_canvas/verify.png')
+filename = os.path.join(dirr, '../../../imgs/generated_canvas/verify_11.png')
 img = imageProcess.preprocessing(filename)
 
 proportion = imageProcess.proportion(img)

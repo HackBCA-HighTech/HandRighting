@@ -34,7 +34,7 @@ class Log_in extends CI_Controller {
 		$numCorrect = 0;
 
 		$time = $this->input->get('time');
-		$resultTemp = shell_exec('python /imageAnalyze/imageAnalyze.py ');
+		$resultTemp = shell_exec('python /imageAnalyze/imageAnalyze.py');
 		$result = json_decode($resultTemp);
 		$prop = $result['prop'];
 		$centX = $result['centX'];
