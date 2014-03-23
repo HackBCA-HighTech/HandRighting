@@ -23,18 +23,15 @@ class Password_write extends CI_Controller {
         $this->load->library('session');
         $counter = $this->session->userdata('counter');
         if($counter == 1){
-        	$times = [];
             $password = $this->input->post('password');
             $this->session->set_userdata(['password' => $password]);
         }
         $password = $this->session->userdata('password');
         if($counter > 1 && $counter <= 10){
         	$time = floatval($this->input->get('time'));
-        	array_push($times, $time);
-        	//if($counter == 4){
-        		var_dump($times);
-        		exit;
-        	}
+        	$times = $this->session->userdata('times');
+        	$times[] = $time;
+        	$this->session->set_userdata(['times' => $times]);
         }
         if ($counter <= 10) {
             $data['password'] = $password;
@@ -42,6 +39,10 @@ class Password_write extends CI_Controller {
             $this->load->view('Canvas', $data);
         }
         else {
+        	$time = floatval($this->input->get('time'));
+        	$times = $this->session->userdata('times');
+        	$times[] = $time;
+        	$this->session->set_userdata(['times' => $times]);
             $results = $this->biometricAnalysis($times);
             $this->session->set_userdata(['ranges' => $results]);
             $this->load->view('verification');
