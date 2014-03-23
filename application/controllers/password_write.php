@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Password_write extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 	public function index()
 {
         $password = $this->input->post('password');
-        $this->load->view('landing', $password);
+        $this->load->view('Canvas', $password);
 	}
 
 

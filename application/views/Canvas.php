@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <title>Canvas</title>
-    <link rel="stylesheet" type="text/css" href="file:///Users/Macbook/Desktop/HandRighting2/css/bootstrap.css"> 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <style type="text/css"><!--
       #container { position: relative;}
       #imageView { border: 0px solid #000; border-radius: 10px; background-color: #eee}
@@ -17,7 +17,7 @@
       </canvas>
     </div>
 
-    <script type="text/javascript" src="file:///Users/Macbook/Desktop/Canvas.js"></script>
+    <script type="text/javascript" src="js/Canvas.js"></script>
   </body>
 </html>
 
