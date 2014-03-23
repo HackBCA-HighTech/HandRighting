@@ -33,7 +33,7 @@ class Log_in extends CI_Controller {
 		$threshold = 3;
 		$numCorrect = 0;
 
-		$time = $this->input->post('time');
+		$time = $this->input->get('time');
 		$resultTemp = shell_exec('python /imageAnalyze/imageAnalyze.py ');
 		$result = json_decode($resultTemp);
 		$prop = $result['prop'];
