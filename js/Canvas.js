@@ -29,7 +29,8 @@ if(window.addEventListener) {
         }
 
         function tool_pencil () {
-            var start, end;
+            var start, end, time;
+            time = 0;
             var tool = this;
             this.started = false;
 
@@ -55,7 +56,8 @@ if(window.addEventListener) {
                     tool.started = false;
                 }
 
-                var time = (end - start)/1000;
+                var addTime = (end - start)/1000;
+                time += addTime;
             };
         }
 
