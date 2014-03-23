@@ -18,41 +18,38 @@ class Verify extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 
-public function index()
-	{$this->load->view('landingendC');
-    }}
-
-/*		if(biometricVerify()){
+public function index(){
+		$var = $this->biometricVerify();
+		if($var){
 			$this->load->view('landingendC');
 		}
 		
-		if(!biometricVerify()){
+		if(!$var){
 			$this->load->view('landingendF');
 		}
 	}
 
-	public function biometricVerify()
-	{
+public function biometricVerify(){
 		$threshold = 3;
 		$numCorrect = 0;
 
-		$time = $this->input->get('time');
+		$time = floatval($this->input->get('time'));
 		define('PATH', 'C:\Python27');
 		$resultTemp = shell_exec('python C:\wamp\www\HandRighting\application\controllers\imageAnalyze\imageVerify.py');
 		$result = json_decode($resultTemp);
-		$prop = $result['prop'];
-		$centX = $result['centX'];
-		$centY = $result['centY'];
+		$prop = $result->prop;
+		$centX = $result->centX;
+		$centY = $result->centY;
 		$this->load->library('session');
 		$ranges = $this->session->userdata('ranges');
-		$minProps = $ranges['propsRange'][0];
-		$maxProps = $ranges['propsRange'][1];
-		$minCentsX = $ranges['centsXRange'][0];
-		$maxCentsX = $ranges['centsXRange'][1];
-		$minCentsY = $ranges['centsYRange'][0];
-		$maxCentsY = $ranges['centsYRange'][1];
-		$minTimes = $ranges['timesRange'][0];
-		$maxTimes = $ranges['timesRange'][1];
+		$minProps = $ranges->propsRange[0];
+		$maxProps = $ranges->propsRange[1];
+		$minCentsX = $ranges->centsXRange[0];
+		$maxCentsX = $ranges->centsXRange[1];
+		$minCentsY = $ranges->centsYRange[0];
+		$maxCentsY = $ranges->centsYRange[1];
+		$minTimes = $ranges->timesRange[0];
+		$maxTimes = $ranges->timesRange[1];
 
 		if($minProps < $prop && $prop < $maxProps){
 			$numCorrect = $numCorrect + 1;
@@ -77,6 +74,7 @@ public function index()
 		else{
 			return false;
 		}
+
 	}
 
 }

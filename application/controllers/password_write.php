@@ -35,7 +35,7 @@ class Password_write extends CI_Controller {
         }
         if ($counter <= 10) {
             $data['password'] = $password;
-            $data['counter'] = $counter;
+            $data['counter'] = $counter;  
             $this->load->view('Canvas', $data);
         }
         else {
@@ -46,8 +46,6 @@ class Password_write extends CI_Controller {
             $results = $this->biometricAnalysis($times);
             $this->session->set_userdata(['ranges' => $results]);
             $ranges = $this->session->userdata('ranges');
-            var_dump($ranges);
-            exit;
             $this->load->view('verification');
         }
         $counter = $counter + 1;
