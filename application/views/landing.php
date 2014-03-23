@@ -37,6 +37,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <img src="handrighting logo.png.gif"
             <a class="navbar-brand">Hand Righting</a>
         </div>
 
