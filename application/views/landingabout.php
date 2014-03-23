@@ -72,7 +72,13 @@
                     </h3>
                     <p>
                         1. Save each handwritten password from the browser into a JPEG file. <br><br>
+                        <div align="center">
+                            <img src="../../img/pass.png" width = 25% height = 25%><br><br>
+                        </div>
                         2. Automatically crop the image to eliminate unnecessary white space in the margins. <br><br>
+                        <div align="center">
+                            <img src="../../img/passWord.png" width = 25% height = 25%><br><br>
+                        </div>
                         3. Extracts the features of each of the inputted image files, accounting for the relative heights of the letters, the relative widths of the letters, and pinpointing the centroid of the text. <br><br>
                         4. Measure the time it takes to write the password in the canvas as an additional identifying factor. <br><br>
                         5. Calculate margins of error within two standard deviations of the mean for each user. Within this margin of error, the handwriting is determined to be that of the rightful user. <br>
