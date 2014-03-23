@@ -29,7 +29,7 @@ if(window.addEventListener) {
         }
 
         function tool_pencil () {
-            var start, end, time;
+            var start, end;
             time = 0.0;
             var tool = this;
             this.started = false;

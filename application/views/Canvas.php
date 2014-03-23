@@ -52,13 +52,16 @@
     </div>
     <br>
     <div style = "margin-left:350px; font-family:Lato">
-        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage(); window.location.href='/index.php/password_write'" >Next (<?php echo $counter; ?>/10)</button>
+        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="doStuff()" >Next (<?php echo $counter; ?>/10)</button>
     </div>
 <br>
     <script type="text/javascript" src="js/Canvas.js"></script>
 
 <script>
-
+function doStuff(){
+    saveImage();
+    window.location.href='/index.php/password_write?time='+time;
+}
 function saveImage(){
     var canvas = document.getElementById('imageView');
     var dataURL = canvas.toDataURL();
