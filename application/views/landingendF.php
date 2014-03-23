@@ -59,7 +59,7 @@
                     <h1>ALERT</h1>
                     <h3>You are a traitor and must be eliminated!</h3>
                     <hr class="intro-divider">
-                        <button class="btn btn-primary"><span class="glyphicon glyphicon-refresh"></span> Refresh</button>
+                        <button class="btn btn-primary" inputid="clickMe" value="clickme" onclick="window.location.href='/index.php/verify'><span class="glyphicon glyphicon-refresh"></span>Try Again</button>
                     </div>
                 </div>
             </div>

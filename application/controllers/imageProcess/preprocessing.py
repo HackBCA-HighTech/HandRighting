@@ -8,7 +8,3 @@ def trim(filename):
     bbox = diff.getbbox()
     if bbox:
         return im.crop(bbox)
-
-im = Image.open("example-rosemary.jpg")
-im = trim(im)
-im.show()

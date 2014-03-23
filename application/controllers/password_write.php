@@ -39,7 +39,7 @@ class Password_write extends CI_Controller {
         }
         else {
             $results = $this->biometricAnalysis($times);
-            $this->session->set_userdata(['results' => $results]);
+            $this->session->set_userdata(['ranges' => $results]);
             $this->load->view('verification');
         }
         $counter = $counter + 1;
@@ -48,7 +48,8 @@ class Password_write extends CI_Controller {
 
     public function biometricAnalysis($times)
     {
-
+    	$result = shell_exec('python /imageAnalyze/imageAnalyze.py ' . escapeshellarg(json_encode($times)));
+    	return json_decode($result);
     }
 }
 
