@@ -51,7 +51,7 @@
       </canvas>
     </div>
     <br>
-    <div style = "margin-left:350px; font-family:Lato">
+    <div style = "font-family:Lato" align="center">
         <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="doStuff()" >Next (<?php echo $counter; ?>/10)</button>
     </div>
 <br>

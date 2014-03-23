@@ -58,13 +58,11 @@
 </nav>
 
 <div class="intro-header">
-
-    <div class="container">
-
+%    <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="intro-message">
-                    <img src="../../img/handrighting_logo.png" height = 50% width = 50%>
+                    <img src="../../img/handrighting_logo.png" height = 35% width = 35%>
                     <h3>Prepare Yourself for a Secret Adventure</h3>
                     <hr class="intro-divider">
                     <div class="col-lg-6 col-lg-offset-3">
