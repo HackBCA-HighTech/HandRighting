@@ -37,8 +37,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <img src="handrighting logo.png.gif"
             <a class="navbar-brand">Hand Righting</a>
+
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -64,7 +64,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="intro-message">
-                    <h1>Hand Righting</h1>
+                    <img src="../../img/handrighting_logo.png" height = 50% width = 50%>
                     <h3>Prepare Yourself for a Secret Adventure</h3>
                     <hr class="intro-divider">
                     <div class="col-lg-6 col-lg-offset-3">

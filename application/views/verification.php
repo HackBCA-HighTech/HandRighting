@@ -10,7 +10,7 @@
     <style type="text/css">
         body { background: rgb(145, 0, 92);}
       #container { position: relative;}
-      #imageView { border: 0px solid #000; border-radius: 10px; background-color: #eee; margin-left:60px}
+      #imageView { border: 0px solid #000; border-radius: 10px; background-color: white; margin-left:60px}
     --></style>
   </head>
   <body>
