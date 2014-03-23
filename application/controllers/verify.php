@@ -37,6 +37,7 @@ public function biometricVerify(){
 		define('PATH', 'C:\Python27');
 		$resultTemp = shell_exec('python C:\wamp\www\HandRighting\application\controllers\imageAnalyze\imageVerify.py');
 		$result = json_decode($resultTemp);
+
 		$prop = $result->prop;
 		$centX = $result->centX;
 		$centY = $result->centY;
@@ -50,6 +51,7 @@ public function biometricVerify(){
 		$maxCentsY = $ranges->centsYRange[1];
 		$minTimes = $ranges->timesRange[0];
 		$maxTimes = $ranges->timesRange[1];
+
 
 		if($minProps < $prop && $prop < $maxProps){
 			$numCorrect = $numCorrect + 1;

@@ -10,7 +10,7 @@ sys.path.append(filename)
 import preprocessing, proportion, centroid, meanStDev
 
 times = json.loads(sys.argv[1])
-NUMDEVS = 2
+NUMDEVS = 3
 imgArray = ['filename_1.png', 'filename_2.png', 'filename_3.png', 'filename_4.png', 'filename_5.png', 'filename_6.png', 'filename_7.png', 'filename_8.png', 'filename_9.png', 'filename_10.png']
 dirr = os.path.dirname(sys.argv[0])
 filename = os.path.abspath(os.path.join(dirr, '../../../img/generated_canvas'))

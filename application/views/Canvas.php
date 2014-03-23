@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <title>Canvas</title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
     <style type="text/css">
@@ -25,15 +25,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" style="font-family: Lato">Hand Righting</a>
+            <a class="navbar-brand" href="<?php echo site_url('welcome')?>" style="font-family: Lato">Hand Righting</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
             <ul class="nav navbar-nav" style="font-family: Lato">
-                <li><a href="#contact">Contact Us</a>
+                <li>
+                    <a href="<?php echo site_url('contact')?>" style="font-family: Lato">Contact Us</a>
                 </li>
-                <li><a href="#about">About</a>
+                <li>
+                    <a href="<?php echo site_url('about')?>" style="font-family: Lato">About</a>
                 </li>
             </ul>
         </div>

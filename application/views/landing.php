@@ -10,14 +10,14 @@
     <title>Homepage</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../../css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom Google Web Font -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
     <!-- Add custom CSS here -->
-    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="../../css/landing-page.css" rel="stylesheet">
 
     <style type="text/css"><!--
         #container { position: relative; }
@@ -37,7 +37,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">Hand Righting</a>
+            <a class="navbar-brand" href="<?php echo site_url('welcome')?>" style="font-family: Lato">Hand Righting</a>
 
         </div>
 
@@ -45,10 +45,10 @@
         <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="<?php echo site_url('contact')?>">Contact Us</a>
+                    <a href="<?php echo site_url('contact')?>" style="font-family: Lato">Contact Us</a>
                 </li>
                 <li>
-                    <a href="#about">About</a>
+                    <a href="<?php echo site_url('about')?>" style="font-family: Lato">About</a>
                 </li>
             </ul>
         </div>
