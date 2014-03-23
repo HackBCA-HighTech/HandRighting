@@ -37,13 +37,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://startbootstrap.com">Pass Your Word</a>
+            <a class="navbar-brand" href="http://startbootstrap.com">Hand Righting</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#about">Learn Mor(se)!</a>
+                <li>
+                    <a href="#contact">Contact Us</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
                 </li>
             </ul>
         </div>
@@ -59,7 +63,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="intro-message">
-                    <h1>Pass(Your)Word</h1>
+                    <h1>Hand Righting</h1>
                     <h3>Prepare Yourself for a Secret Adventure</h3>
                     <hr class="intro-divider">
                     <div class="col-lg-6 col-lg-offset-3">
