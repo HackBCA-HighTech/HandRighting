@@ -67,7 +67,7 @@ function saveImage(){
     var dataURL = canvas.toDataURL();
 
     // pass in $password later
-    var filename = "verify";
+    var filename = "filename";
 
     //document.getElementById('canvasImg').src = dataURL;
     console.log(dataURL);
