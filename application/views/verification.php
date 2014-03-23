@@ -10,7 +10,7 @@
     <style type="text/css">
         body { background: rgb(145, 0, 92);}
       #container { position: relative;}
-      #imageView { border: 0px solid #000; border-radius: 10px; background-color: white; margin-left:60px}
+      #imageView { border: 0px solid #000; border-radius: 10px; background-color: #ffffff; margin-left:60px}
     --></style>
   </head>
   <body>
@@ -43,16 +43,16 @@
 <br>
 <br>
 <br>
-    <h2 style= "margin-left:60px; color:white; font-family: Lato" align="center"> Nice work! Now unleash your secrets... </h2>
-    <h4 style= "color:#E6BAC3; font-family: Lato" align="center"> Log-in below </h4>
+    <h2 style= "margin-left:60px; color:white; font-family: lato" align="center"> Nice work! Now unleash your secrets... </h2>
+    <h4 style= "color:#E6BAC3; font-family: lato" align="center"> Log-in below </h4>
     <br>
     <div id="container">
       <canvas id="imageView" width="800" height="200">
       </canvas>
     </div>
     <br>
-    <div style = margin-left:400px>
-        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="doStuff()" >Submit</button>
+    <div style = "font-family:Lato" align = "center">
+        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage()">Submit</button>
     </div>
 <br>
     <script type="text/javascript" src="js/Canvas.js"></script>
@@ -60,15 +60,11 @@
 <script>
 
 function saveImage(){
-    function doStuff(){
-    saveImage();
-    window.location.href='/index.php/verify?time='+time;
-}
     var canvas = document.getElementById('imageView');
     var dataURL = canvas.toDataURL();
 
     // pass in $password later
-    var filename = "verify";
+    var filename = "helloworld";
 
     //document.getElementById('canvasImg').src = dataURL;
     console.log(dataURL);
