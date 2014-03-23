@@ -1,7 +1,7 @@
 from PIL import Image, ImageFilter
-im = Image.open(fileName)
 
-def findCentroid(im):
+def findCentroid(fileName):
+    im = Image.open(fileName)
     width, height = im.size
     XX, YY, count = 0, 0, 0
     for x in xrange(0, width, 1):
@@ -17,6 +17,3 @@ def findCentroid(im):
     finalArray.append(final_x)
     finalArray.append(final_y)
     return finalArray
-
-if __name__ == "__main__":
-    print findCentroid(BlackBox.jpg)
