@@ -47,7 +47,7 @@
       </canvas>
     </div>
     <br>
-    <div align = "center">
+    <div style = margin-left:350px>
         <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage(); window.location.href='/index.php/password_write'" >Next (<?php echo $counter; ?>/10)</button>
     </div>
 <br>
