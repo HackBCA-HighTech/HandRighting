@@ -18,9 +18,10 @@ class Welcome extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-{
+	{
         $password = $this->input->post('password');
-        $this->load->view('landing', $password);
+        $_SESSION['password'] = $password;
+        $this->load->view('Canvas', $password);
 	}
 
 
