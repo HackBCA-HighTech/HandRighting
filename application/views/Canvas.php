@@ -4,12 +4,16 @@
 <head>
     <title>Canvas</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <style type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
-      #container { position: relative;}
+    <style type="text/css">
+        body { background: darkturquoise;}
+        #container { position: relative;}
       #imageView { border: 0px solid #000; border-radius: 10px; background-color: #eee; margin-left:60px}
     --></style>
   </head>
+
   <body>
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 
@@ -21,12 +25,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">Hand Righting</a>
+            <a class="navbar-brand" style="font-family: Lato">Hand Righting</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" style="font-family: Lato">
                 <li><a href="#contact">Contact Us</a>
                 </li>
                 <li><a href="#about">About</a>
@@ -40,14 +44,14 @@
 <br>
 <br>
 <br>
-    <h2 style= margin-left:60px> Please clearly print your password, <?php echo $password; ?>, into the canvas below.</h2>
+    <h2 style= "margin-left:60px; color:white; font-family:Lato" align = "center"> Please clearly print your password, <?php echo $password; ?>, below:</h2>
     <br>
     <div id="container">
       <canvas id="imageView" width="800" height="200">
       </canvas>
     </div>
     <br>
-    <div style = margin-left:350px>
+    <div style = "margin-left:350px; font-family:Lato">
         <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage(); window.location.href='/index.php/password_write'" >Next (<?php echo $counter; ?>/10)</button>
     </div>
 <br>

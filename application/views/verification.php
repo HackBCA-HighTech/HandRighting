@@ -4,8 +4,11 @@
 <head>
     <title>Verification</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <style type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
+    <style type="text/css">
+        body { background: rgb(145, 0, 92);}
       #container { position: relative;}
       #imageView { border: 0px solid #000; border-radius: 10px; background-color: #eee; margin-left:60px}
     --></style>
@@ -21,12 +24,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand">Hand Righting</a>
+            <a class="navbar-brand" style="font-family: Lato">Hand Righting</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" style="font-family: Lato">
                 <li><a href="#contact">Contact Us</a>
                 </li>
                 <li><a href="#about">About</a>
@@ -40,7 +43,8 @@
 <br>
 <br>
 <br>
-    <h2 style= margin-left:60px align="center"> Nice Work! Now, please attempt to log-in.</h2>
+    <h2 style= "margin-left:60px; color:white; font-family: Lato" align="center"> Nice work! Now unleash your secrets... </h2>
+    <h4 style= "color:#E6BAC3; font-family: Lato" align="center"> Log-in below </h4>
     <br>
     <div id="container">
       <canvas id="imageView" width="800" height="200">

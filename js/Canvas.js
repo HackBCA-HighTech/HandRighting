@@ -60,7 +60,7 @@ if(window.addEventListener) {
                 time += addTime;
             };
         }
-
++
 
         function ev_canvas (ev) {
             if (ev.layerX || ev.layerX == 0) {
