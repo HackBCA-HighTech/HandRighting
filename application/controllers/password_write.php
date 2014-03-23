@@ -22,15 +22,19 @@ class Password_write extends CI_Controller {
 	{
         $this->load->library('session');
         $counter = $this->session->userdata('counter');
-        $times = [];
-
         if($counter == 1){
+        	$times = [];
             $password = $this->input->post('password');
             $this->session->set_userdata(['password' => $password]);
         }
         $password = $this->session->userdata('password');
         if($counter > 1 && $counter <= 10){
-        	$times[] = $this->input->post('time');
+        	$time = floatval($this->input->get('time'));
+        	array_push($times, $time);
+        	//if($counter == 4){
+        		var_dump($times);
+        		exit;
+        	}
         }
         if ($counter <= 10) {
             $data['password'] = $password;
