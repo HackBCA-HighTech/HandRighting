@@ -41,7 +41,6 @@ window.addEventListener('load', function () {
     this.mousemove = function (ev) {
       if (tool.started) {
         context.lineTo(ev._x, ev._y);
-        context.lineWidth = 3;
         context.stroke();
       }
     };
