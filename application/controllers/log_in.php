@@ -19,7 +19,13 @@ class Log_in extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('');
+		$this->load->view('Canvas.php');
+	}
+
+	public function biometricAnalysis()
+	{
+		//load images from database
+		
 	}
 
 }
