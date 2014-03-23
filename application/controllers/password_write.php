@@ -61,6 +61,7 @@ class Password_write extends CI_Controller {
     	$result = shell_exec('python C:\wamp\www\HandRighting\application\controllers\imageAnalyze\imageAnalyze.py ' . escapeshellarg($jsonTimes));
     	return json_decode($result);
     }
+
 }
 
 /* End of file welcome.php */

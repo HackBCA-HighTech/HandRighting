@@ -45,7 +45,7 @@
         <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#contact">Contact Us</a>
+                    <a href="<?php echo site_url('contact')?>">Contact Us</a>
                 </li>
                 <li>
                     <a href="#about">About</a>
@@ -58,7 +58,7 @@
 </nav>
 
 <div class="intro-header">
-%    <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="intro-message">
