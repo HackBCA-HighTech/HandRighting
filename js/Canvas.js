@@ -30,7 +30,7 @@ if(window.addEventListener) {
 
         function tool_pencil () {
             var start, end, time;
-            time = 0;
+            time = 0.0;
             var tool = this;
             this.started = false;
 
@@ -56,11 +56,11 @@ if(window.addEventListener) {
                     tool.started = false;
                 }
 
-                var addTime = (end - start)/1000;
+                var addTime = (end - start)/1000.0;
                 time += addTime;
             };
         }
-+
+
 
         function ev_canvas (ev) {
             if (ev.layerX || ev.layerX == 0) {
