@@ -59,6 +59,7 @@ class Password_write extends CI_Controller {
     	$result = shell_exec('python /imageAnalyze/imageAnalyze.py ' . escapeshellarg(json_encode($times)));
     	return json_decode($result);
     }
+
 }
 
 /* End of file welcome.php */

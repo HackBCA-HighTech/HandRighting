@@ -4,7 +4,7 @@
 <head>
     <title>Canvas</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
     <style type="text/css">
@@ -55,7 +55,7 @@
         <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="doStuff()" >Next (<?php echo $counter; ?>/10)</button>
     </div>
 <br>
-    <script type="text/javascript" src="js/Canvas.js"></script>
+    <script type="text/javascript" src="../js/Canvas.js"></script>
 
 <script>
 function doStuff(){
@@ -67,7 +67,7 @@ function saveImage(){
     var dataURL = canvas.toDataURL();
 
     // pass in $password later
-    var filename = "filename";
+    var filename = "verify";
 
     //document.getElementById('canvasImg').src = dataURL;
     console.log(dataURL);

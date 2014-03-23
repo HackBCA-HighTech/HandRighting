@@ -4,7 +4,7 @@
 <head>
     <title>Verification</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
     <style type="text/css">
@@ -52,19 +52,23 @@
     </div>
     <br>
     <div style = "font-family:Lato" align = "center">
-        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage()">Submit</button>
+        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="doStuff()" >Submit </button>
+
     </div>
 <br>
-    <script type="text/javascript" src="js/Canvas.js"></script>
 
 <script>
+
+function doStuff(){
+    saveImage();
+    window.location.href='/index.php/verify?time='+time;
 
 function saveImage(){
     var canvas = document.getElementById('imageView');
     var dataURL = canvas.toDataURL();
 
     // pass in $password later
-    var filename = "helloworld";
+    var filename = "verify";
 
     //document.getElementById('canvasImg').src = dataURL;
     console.log(dataURL);
@@ -82,9 +86,9 @@ function saveImage(){
         });
 }
 </script>
-<script src="/js/jquery-1.10.2.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/Canvas.js"></script>
+<script src="../js/jquery-1.10.2.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/Canvas.js"></script>
   </body>
 </html>
 

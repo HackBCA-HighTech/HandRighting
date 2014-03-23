@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Log_in extends CI_Controller {
+class Verify extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -17,12 +17,12 @@ class Log_in extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-$this->load->view('landingendC');
 
+public function index()
+	{$this->load->view('landingendC');
+    }}
 
-/*	public function index()
-	{
-		if(biometricVerify()){
+/*		if(biometricVerify()){
 			$this->load->view('landingendC');
 		}
 		
