@@ -21,7 +21,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="http://startbootstrap.com">Hand Righting</a>
+            <a class="navbar-brand">Hand Righting</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,7 +40,7 @@
 <br>
 <br>
 <br>
-    <h2 style= margin-left:60px> Please clearly print your password into the canvas below.</h2>
+    <h2 style= margin-left:60px> Please clearly print your password, <?php echo $password; ?>, into the canvas below.</h2>
     <br>
     <div id="container">
       <canvas id="imageView" width="800" height="200">
@@ -48,7 +48,7 @@
     </div>
     <br>
     <div align = "center">
-        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage()" >Next (2/10)</button>
+        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage(); window.location.href='/index.php/password_write'" >Next (<?php echo $counter; ?>/10)</button>
     </div>
 <br>
     <script type="text/javascript" src="js/Canvas.js"></script>
