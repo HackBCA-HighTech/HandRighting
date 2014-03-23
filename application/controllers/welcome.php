@@ -22,8 +22,15 @@ class Welcome extends CI_Controller {
 		$this->load->library('session');
 		$this->session->set_userdata(['counter' => 1]);
 		$this->load->view('landing');
-	}
 
+/*        $files = glob('/img/generated_canvas/'); // get all file names
+        foreach($files as $file){ // iterate files
+            if(is_file($file)){
+                unlink($file); // delete file
+            }
+        }
+	}
+*/
 }
 
 /* End of file welcome.php */
