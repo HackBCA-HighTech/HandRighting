@@ -19,6 +19,11 @@
     <!-- Add custom CSS here -->
     <link href="css/landing-page.css" rel="stylesheet">
 
+    <style type="text/css"><!--
+      #container { position: relative; }
+      #imageView { border: 1px solid #000; }
+    --></style>
+
 </head>
 
 <body>
@@ -77,8 +82,13 @@
 <!-- /.banner -->
 
 <!-- JavaScript -->
-<script src="js/jquery-1.10.2.js"></script>
+<script src="HandRighting2/js/jquery-1.10.2.js"></script>
 <script src="js/bootstrap.js"></script>
+
+
+<div id="container">
+      <canvas id="imageView" width="800" height="300">
+      </canvas>
 
 </body>
 
