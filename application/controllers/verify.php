@@ -17,7 +17,10 @@ class Log_in extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+$this->load->view('landingendC');
+
+
+/*	public function index()
 	{
 		if(biometricVerify()){
 			$this->load->view('landingendC');

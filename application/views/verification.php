@@ -52,19 +52,23 @@
     </div>
     <br>
     <div style = margin-left:400px>
-        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage()" >Submit</button>
+        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="doStuff()" >Next (<?php echo $counter; ?>/10)</button>
     </div>
 <br>
     <script type="text/javascript" src="js/Canvas.js"></script>
 
 <script>
+    function doStuff(){
+        saveImage();
+        window.location.href='/index.php/verify?time='+time;
+    }
 
 function saveImage(){
     var canvas = document.getElementById('imageView');
     var dataURL = canvas.toDataURL();
 
     // pass in $password later
-    var filename = "helloworld";
+    var filename = "verification";
 
     //document.getElementById('canvasImg').src = dataURL;
     console.log(dataURL);
