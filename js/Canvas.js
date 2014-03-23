@@ -3,7 +3,7 @@ if(window.addEventListener) {
     window.addEventListener('load', function () {
         var canvas, context, tool;
 
-/*        function init () {
+        function init () {
             canvas = document.getElementById('imageView');
             if (!canvas) {
                 alert('Error: I cannot find the canvas element!');
@@ -20,7 +20,7 @@ if(window.addEventListener) {
                 alert('Error: failed to getContext!');
                 return;
             }
-*/
+
             tool = new tool_pencil();
 
             canvas.addEventListener('mousedown', ev_canvas, false);
@@ -29,10 +29,12 @@ if(window.addEventListener) {
         }
 
         function tool_pencil () {
+            var start, end;
             var tool = this;
             this.started = false;
 
             this.mousedown = function (ev) {
+                start = new Date().getTime();
                 context.beginPath();
                 context.moveTo(ev._x, ev._y);
                 tool.started = true;
@@ -47,10 +49,13 @@ if(window.addEventListener) {
             };
 
             this.mouseup = function (ev) {
+                end = new Date().getTime();
                 if (tool.started) {
                     tool.mousemove(ev);
                     tool.started = false;
                 }
+
+                var time = (end - start)/1000;
             };
         }
 
@@ -71,5 +76,4 @@ if(window.addEventListener) {
         }
 
         init();
-
     }, false); }

@@ -30,7 +30,7 @@ class canvas_data extends CI_Controller {
         $data = base64_decode($img);
         $this->load->library('session');
         $counter = $this->session->userdata('counter');
-        $file = UPLOAD_DIR . $filename . "_" . $counter . '.png';
+        $file = UPLOAD_DIR . "filename_" . ($counter-1) . '.png';
         $success = file_put_contents($file, $data);
 //send request to ocr
 
