@@ -41,7 +41,7 @@
 <br>
 <br>
     <h2 style= margin-left:60px> Please clearly print your password into the canvas below.</h2>
-    <br> 
+    <br>
     <div id="container">
       <canvas id="imageView" width="800" height="200">
       </canvas>
@@ -78,9 +78,9 @@ function saveImage(){
         });
 }
 </script>
-<script src="js/jquery-1.10.2.js"></script>
-<script src="js/bootstrap.js"></script>
-
+<script src="/js/jquery-1.10.2.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/Canvas.js"></script>
   </body>
 </html>
 
