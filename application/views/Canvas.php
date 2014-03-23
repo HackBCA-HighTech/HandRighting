@@ -58,13 +58,17 @@ function saveImage(){
     var canvas = document.getElementById('imageView');
     var dataURL = canvas.toDataURL();
 
+    // pass in $password later
+    var filename = "helloworld";
+
     //document.getElementById('canvasImg').src = dataURL;
     console.log(dataURL);
     $.ajax({
         type: "POST",
         url: "<?php echo site_url('canvas_data')?>",
         data: {
-            imgBase64: dataURL
+            imgBase64: dataURL,
+            text: filename
         }
     }
     )
