@@ -1,7 +1,6 @@
 from PIL import Image, ImageFilter
 
-def findCentroid(fileName):
-    im = Image.open(fileName)
+def findCentroid(im):
     width, height = im.size
     XX, YY, count = 0, 0, 0
     for x in xrange(0, width, 1):

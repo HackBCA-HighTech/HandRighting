@@ -22,18 +22,23 @@ class Password_write extends CI_Controller {
 	{
         $this->load->library('session');
         $counter = $this->session->userdata('counter');
+        $times = [];
+
         if($counter == 1){
             $password = $this->input->post('password');
             $this->session->set_userdata(['password' => $password]);
         }
         $password = $this->session->userdata('password');
+        if($counter > 1 && $counter <= 10){
+        	$times[] = $this->input->post('time');
+        }
         if ($counter <= 10) {
             $data['password'] = $password;
             $data['counter'] = $counter;
             $this->load->view('Canvas', $data);
         }
         else {
-            $results = $this->biometricAnalysis();
+            $results = $this->biometricAnalysis($times);
             $this->session->set_userdata(['results' => $results]);
             $this->load->view('verification');
         }
@@ -41,9 +46,8 @@ class Password_write extends CI_Controller {
         $this->session->set_userdata('counter', $counter);
 	}
 
-    public function biometricAnalysis()
+    public function biometricAnalysis($times)
     {
-        //load images from database
 
     }
 }

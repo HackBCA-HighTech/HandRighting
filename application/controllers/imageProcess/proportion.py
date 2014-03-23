@@ -1,7 +1,6 @@
 from PIL import Image
 
-def proportion(filename):
-	img = Image.open(filename)
+def proportion(img):
 	w, h = img.size
 	if w>=h:
 		propFact = float(w) / float(h)
