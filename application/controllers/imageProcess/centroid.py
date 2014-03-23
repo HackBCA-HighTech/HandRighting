@@ -1,11 +1,11 @@
 from PIL import Image, ImageFilter
 
-def findCentroid(im):
+def centroid(im):
     width, height = im.size
     XX, YY, count = 0, 0, 0
     for x in xrange(0, width, 1):
         for y in xrange(0, height, 1):
-            if im.getpixel((x, y)) == (255,255,255):
+            if im.getpixel((x, y)) != (0,0,0):
                 XX += x
                 YY += y
                 count += 1

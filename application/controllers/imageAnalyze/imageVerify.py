@@ -1,14 +1,21 @@
-import imageProcess
-import os, json
+import os, sys, json
+dirr = os.path.dirname(sys.argv[0])
+filename = os.path.join(dirr, '../../libraries')
+sys.path.append(filename)
 
-os.system("setPath.py")
-dirr = os.path.dirname(__file__)
-filename = os.path.join(dirr, '../../../imgs/generated_canvas/verify_11.png')
-img = imageProcess.preprocessing(filename)
+dirr = os.path.dirname(sys.argv[0])
+filename = os.path.join(dirr, '../imageProcess')
+sys.path.append(filename)
 
-proportion = imageProcess.proportion(img)
-centroidX = imageProcess.centroid(img)[0]
-centroidY = imageProcess.centroid(img)[1]
+import preprocessing, proportion, centroid
+
+dirr = os.path.dirname(sys.argv[0])
+filename = os.path.join(dirr, '../../../img/generated_canvas/verify_11.png')
+img = preprocessing.preprocessing(filename)
+
+proportion = proportion.proportion(img)
+centroidX = centroid.centroid(img)[0]
+centroidY = centroid.centroid(img)[1]
 
 result = {
 	'prop' : proportion,

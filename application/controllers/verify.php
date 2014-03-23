@@ -34,7 +34,8 @@ class Log_in extends CI_Controller {
 		$numCorrect = 0;
 
 		$time = $this->input->get('time');
-		$resultTemp = shell_exec('python /imageAnalyze/imageAnalyze.py');
+		define('PATH', 'C:\Python27');
+		$resultTemp = shell_exec('python C:\wamp\www\HandRighting\application\controllers\imageAnalyze\imageVerify.py');
 		$result = json_decode($resultTemp);
 		$prop = $result['prop'];
 		$centX = $result['centX'];

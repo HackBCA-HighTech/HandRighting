@@ -1,28 +1,36 @@
-import imageProcess
 import os, sys, json
+dirr = os.path.dirname(sys.argv[0])
+filename = os.path.join(dirr, '../../libraries')
+sys.path.append(filename)
+
+dirr = os.path.dirname(sys.argv[0])
+filename = os.path.join(dirr, '../imageProcess')
+sys.path.append(filename)
+
+import preprocessing, proportion, centroid, meanStDev
 
 times = json.loads(sys.argv[1])
 NUMDEVS = 2
-os.system("setPath.py")
 imgArray = ['filename_1.png', 'filename_2.png', 'filename_3.png', 'filename_4.png', 'filename_5.png', 'filename_6.png', 'filename_7.png', 'filename_8.png', 'filename_9.png', 'filename_10.png']
-dirr = os.path.dirname(__file__)
-filename = os.path.join(dirr, '../../../imgs/generated_canvas')
+dirr = os.path.dirname(sys.argv[0])
+filename = os.path.abspath(os.path.join(dirr, '../../../img/generated_canvas'))
 centroidsX = []
 centroidsY = []
 proportions = []
 
 for img in imgArray:
- 	fileTemp = os.path.join(filename, img)
- 	imgTemp = imageProcess.preprocessing(fileTemp)
- 	proportions.append(imageProcess.proportion(imgTemp))
-	centroidsX.append(imageProcess.centroid(imgTemp)[0])
- 	centroidsY.append(imageProcess.centroid(imgTemp)[1])
+	fileTemp = os.path.join(filename, img)
+	imgTemp = preprocessing.preprocessing(fileTemp)
+	imgTemp.save('fart.png')
+	proportions.append(proportion.proportion(imgTemp))
+	centroidsX.append(centroid.centroid(imgTemp)[0])
+	centroidsY.append(centroid.centroid(imgTemp)[1])
 
 
-meanProps, devProps = imageProcess.meanStDev(proportions)
-meanCentsX, devCentsX = imageProcess.meanStDev(centroidsX)
-meanCentsY, devCentsY = imageProcess.meanStDev(centroidsY)
-meanTimes, devTimes = imageProcess.meanStDev(times)
+meanProps, devProps = meanStDev.meanStDev(proportions)
+meanCentsX, devCentsX = meanStDev.meanStDev(centroidsX)
+meanCentsY, devCentsY = meanStDev.meanStDev(centroidsY)
+meanTimes, devTimes = meanStDev.meanStDev(times)
 
 minProps = meanProps - (NUMDEVS * devProps)
 maxProps = meanProps + (NUMDEVS * devProps)
