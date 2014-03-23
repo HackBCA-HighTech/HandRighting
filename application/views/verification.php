@@ -52,7 +52,7 @@
     </div>
     <br>
     <div style = "font-family:Lato" align = "center">
-        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage()">Submit</button>
+        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage()">Submit </button>
     </div>
 <br>
     <script type="text/javascript" src="js/Canvas.js"></script>
