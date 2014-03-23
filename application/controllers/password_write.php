@@ -39,13 +39,15 @@ class Password_write extends CI_Controller {
             $this->load->view('Canvas', $data);
         }
         else {
-        	$time = floatval($this->input->get('time'));
-        	$times = $this->session->userdata('times');
-        	$times[] = $time;
-        	$this->session->set_userdata(['times' => $times]);
-            $results = $this->biometricAnalysis($times);
-            $this->session->set_userdata(['ranges' => $results]);
-            $ranges = $this->session->userdata('ranges');
+        	if($counter == 11){
+                $time = floatval($this->input->get('time'));
+        	    $times = $this->session->userdata('times');
+        	    $times[] = $time;
+        	    $this->session->set_userdata(['times' => $times]);
+                $results = $this->biometricAnalysis($times);
+                $this->session->set_userdata(['ranges' => $results]);
+                $ranges = $this->session->userdata('ranges');
+            }
             $this->load->view('verification');
         }
         $counter = $counter + 1;
