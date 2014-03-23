@@ -52,15 +52,18 @@
     </div>
     <br>
     <div style = "font-family:Lato" align = "center">
-        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage1();window.location.href=<?php echo site_url('contact')?>" >Submit </button>
+        <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="doStuff()"> Submit </button>
     </div>
 
 <br>
     <script type="text/javascript" src="/js/Canvas.js"></script>
 
 <script>
-
-function saveImage1(){
+function doStuff(){
+        saveImage();
+        window.location.href='/index.php/verify?time='+time;
+}
+function saveImage(){
     var canvas = document.getElementById('imageView');
     var dataURL = canvas.toDataURL();
 
