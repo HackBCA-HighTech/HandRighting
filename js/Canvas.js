@@ -34,13 +34,14 @@ window.addEventListener('load', function () {
 
     this.mousedown = function (ev) {
         context.beginPath();
-        context.moveTo(ev._x, ev._y);
+        context.moveTo(ev._x-60, ev._y);
         tool.started = true;
     };
 
     this.mousemove = function (ev) {
       if (tool.started) {
-        context.lineTo(ev._x, ev._y);
+        context.lineTo(ev._x-60, ev._y);
+        context.lineWidth = 1;
         context.stroke();
       }
     };
@@ -72,3 +73,4 @@ window.addEventListener('load', function () {
   init();
 
 }, false); }
+
