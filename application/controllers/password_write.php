@@ -20,10 +20,7 @@ class Password_write extends CI_Controller {
 	public function index()
 	{
         $password = $this->input->post('password');
-<<<<<<< HEAD
         $_SESSION['password'] = $password;
-=======
->>>>>>> f2a579a6ac191b718eb41e683bcfb2691e52b663
         $this->load->view('Canvas', $password);
 	}
 
