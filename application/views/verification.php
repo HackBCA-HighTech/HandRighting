@@ -40,14 +40,14 @@
 <br>
 <br>
 <br>
-    <h2 style= margin-left:60px> Nice Work! Now, please attempt to log-in.</h2>
+    <h2 style= margin-left:60px align="center"> Nice Work! Now, please attempt to log-in.</h2>
     <br>
     <div id="container">
       <canvas id="imageView" width="800" height="200">
       </canvas>
     </div>
     <br>
-    <div align = "center">
+    <div style = margin-left:400px>
         <button type="button" class="btn btn-lg btn-info" inputid="clickMe" value="clickme" onclick="saveImage()" >Submit</button>
     </div>
 <br>

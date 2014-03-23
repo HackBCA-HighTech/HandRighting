@@ -73,6 +73,7 @@ function saveImage(){
         }
     }
     )
+
     .done(function(response) {
             console.log('saved: ' + response);
         });
