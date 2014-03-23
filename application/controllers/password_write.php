@@ -19,10 +19,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 {
-		$this->load->view('landing');
+        $password = $this->input->post('password');
+        $this->load->view('landing', $password);
 	}
 
-$password = $this->input->post('password');
 
 }
 

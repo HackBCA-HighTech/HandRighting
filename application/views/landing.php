@@ -58,8 +58,9 @@
                     <h3>Prepare Yourself for a Secret Adventure</h3>
                     <hr class="intro-divider">
                     <div class="form-group col-lg-6 col-lg-offset-3">
-                        <div class="input-group">
-                            <input type="password" class="form-control" id="examplePassword" style="width:400px; height:50px" name="name" placeholder="Enter Password">
+                        <form class="form-inline" role="form" action="<?php echo site_url('password_write')?>" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="examplePassword" style="width:400px; height:50px" name="password" placeholder="Enter Password">
                             <span class="input-group-btn">
                                 <button type="submit" class="btn btn-primary btn-lg btn-block label-success" style="width:200px; height:50px; font-size:20px">Submit!</button>
                               </span>
